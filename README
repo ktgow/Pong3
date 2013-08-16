@@ -1,0 +1,19 @@
+Pong3
+
+LED controller for Pong3 table.
+
+This is the source code used to program an Arduino Mega, to control
+the LED strips on the Pong3 table.  The table is 6 sided, with LEDs along
+each border and from each corner to the center.  In addition, there are
+2 strips of overhead LEDS.  The LEDs on the table are full RGB, individually
+addressable.  The overhead strips are RGB but are not individually addressable,
+so they must all be the same color.
+
+A lot of compromises needed to made so the program would fit in memory, even
+on the Arduino Mega.  While it has lots of Flash memory, so the code itself
+can be fairly large, it has very limited RAM.  Some data, such as the graph
+that indicates which LEDs neighbor which, is stored in Flash memory and copied
+out as needed.
+
+There are a lot of experiments in this code, and it's evolved clumsily
+over time.  There's plenty of room to consolidate pieces and clean things up.

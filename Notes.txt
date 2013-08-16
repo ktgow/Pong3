@@ -1,0 +1,37 @@
+Profiling with a 30 LED dim rainbow runner and PulseColor.
+Avg frame time is around 280ms.
+
+Removed floats from KeyFrameColorInterpolator.
+Avg frame time is now around 255ms.
+
+Changed virtual SetColor function to passed CopyColor function...
+Frame time is similar, around 250ms.  This one isn't worth it.  It makes
+the code really ugly, and it doesn't save much time.
+
+----------------
+Six player rainbow spiral.
+Avg time 125ms.
+Removing dim mult and making original rainbow dim.
+Avg time 60ms!!!  Holy crap.
+
+Making keyframe interpolators array lookups.
+Animation time is 37ms.
+Total frame time is 50ms.  I think that's the fastest it can go.
+Cool.
+
+-----------------
+Weird problems uploading now that I've added Fire.
+42,134 bytes uploads fine.  No fire.
+42,562 works.  Fire code commented out.
+42,776 bytes works fine.  Uncommented constructor.
+42,890 bytes works.  Uncommented start of fire Step loop.
+43,108 bytes works.  Uncommented first for inner for loop.
+43,554 bytes works now.  Everything's uncommented.  WTF.
+
+------------------
+More animation ideas:
+Cube
+Pong
+Color sweeping across the table, side to side.
+
+Fix the fire colors, so there's more variety farther out.
